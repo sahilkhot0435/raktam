@@ -1,0 +1,14 @@
+{
+  "name": "raktam",
+  "version": "1.0.0",
+  "description": "Raktam - Smart Blood Bank & Emergency Blood Availability System",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

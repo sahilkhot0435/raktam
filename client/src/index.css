@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-raktam-red hover:bg-raktam-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+  .btn-outline {
+    @apply border-2 border-raktam-red text-raktam-red hover:bg-raktam-red hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md border border-gray-100 p-6;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-raktam-red focus:border-transparent transition-all;
+  }
+  .blood-badge {
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-full font-bold text-sm;
+  }
+}
+
+/* Blood type colors */
+.status-available { @apply bg-green-100 text-green-800; }
+.status-low { @apply bg-yellow-100 text-yellow-800; }
+.status-critical { @apply bg-orange-100 text-orange-800; }
+.status-unavailable { @apply bg-gray-100 text-gray-500; }
+
+/* Emergency pulse animation */
+@keyframes emergency-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0.5); }
+  50% { box-shadow: 0 0 0 15px rgba(185, 28, 28, 0); }
+}
+.emergency-pulse {
+  animation: emergency-pulse 2s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #B91C1C; border-radius: 3px; }
